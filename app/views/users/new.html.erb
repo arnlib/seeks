@@ -1,0 +1,17 @@
+<form action="/users" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<p>Email</p>
+	<input type="text" name="user[email]" id="Email">
+	<p>Name</p>
+	<input type="text" name="user[name]" id="Name">
+	<p>Password</p>
+	<input type="password" name="user[password]" id="Password">
+	<p>Password Confirmation</p>
+	<input type="password" name="user[password_confirmation]" id="Password Confirmation">
+
+	<button type="submit" id="Join">Join</button>
+</form>
+
+<p>Already have an account? Log in here:</p>
+<%= link_to "Login", session_new_path %>
